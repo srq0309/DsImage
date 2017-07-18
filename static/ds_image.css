@@ -1,0 +1,340 @@
+* {
+    padding: 0;
+    margin: 0
+}
+
+/*给大盒子添加样式*/
+#con {
+    width: 720px;
+    margin: 60px auto;
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px #000;
+    padding: 20px;
+    background: #F4F4F4;
+}
+
+/*小盒子内容区的样式，display:inline-block：实现 效果*/
+#con .pic {
+    width: 360px;
+    min-height: 100px;
+    padding: 20px 15px;
+    margin: auto;
+    display: block;
+}
+
+/* 标签通用样式 by 梦乄无情 ds_web:srq0309.net */
+
+* {
+    margin: 0;
+}
+
+head {
+    display: none;
+}
+
+body {
+    color: #222222;
+    text-align: center;
+    font-family: "Avenir Next", Helvetica, Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
+    text-rendering: optimizeLegibility;
+    background-color: #ffffff;
+    margin-bottom: 5px;
+    font-size: 100%;
+}
+
+header {
+    padding: 0.6em 0;
+    font-family: "Avenir Next", Helvetica, Arial, "Lantinghei SC", "Microsoft YaHei", sans-serif;
+}
+
+a {
+    color: #db7093;
+    text-decoration: none;
+}
+
+header nav {
+    float: right;
+    padding-top: 14px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+nav a {
+    display: inline-block;
+    margin-right: 1.2em;
+    padding-bottom: 0.2em;
+    font-weight: 700;
+    border-bottom: 3px solid transparent;
+    font-size: 0.9rem;
+    color: #404040;
+}
+
+nav p {
+    display: inline-block;
+    margin-right: 1.2em;
+    padding-bottom: 0.2em;
+    font-weight: 700;
+    border-bottom: 3px solid transparent;
+    font-size: 0.9rem;
+    color: #404040;
+}
+
+section {
+    padding-bottom: 10px;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    line-height: 1.1;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;
+    color: #3d4657;
+}
+
+h1 {
+    font-size: 1.7em;
+    line-height: 1.7em;
+    font-weight: 700;
+}
+
+h2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+blockquote, h1, h2, h3, h4, h5, h6, .ui.header {
+    font-family: "Linux Libertine", Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, "TW-Kai", serif;
+}
+
+article h1 {
+    margin-bottom: 8px;
+    line-height: 130%;
+    text-align: center !important;
+}
+
+blockquote {
+    padding: 0 1em;
+    color: #6a737d;
+    border-left: 0.25em solid #dfe2e5;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 40px;
+    -webkit-margin-end: 40px;
+}
+
+section {
+    font-family: "Linux Libertine", -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+    line-height: 170%;
+}
+
+p {
+    text-align: justify;
+    margin: 20px 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: list-item;
+    text-align: -webkit-match-parent;
+}
+
+small {
+    font-size: smaller;
+}
+
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    -webkit-padding-start: 40px;
+}
+
+section ul {
+    padding-left: 0;
+}
+
+h1 small {
+    font-weight: 400;
+    font-size: 50%;
+    color: #999;
+}
+
+footer {
+    font-size: small;
+    line-height: 2em;
+    color: #858585;
+    text-align: center;
+    margin-top: 3em;
+}
+
+footer p {
+    text-align: center;
+}
+
+/* code样式 */
+code {
+    white-space: pre;
+    font-size: 90%;
+    background-color: #F4F4F4;
+    border: 1px solid #eee;
+    font-family: "Source Code Pro", Menlo, Monaco, Consolas, "Courier New", monospace;
+    border-radius: 4px;
+}
+
+.inner, pre code, .post > * {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 25px;
+    text-align: left;
+    width: 100%;
+    display: block;
+}
+
+/* class样式 */
+
+.header-container {
+    margin-bottom: 1.5em;
+    background: #f3f3f3;
+}
+
+.avatar {
+    border-radius: 60%;
+    max-width: 60px;
+    vertical-align: -9px;
+    margin-left: 12px;
+}
+
+.inner .sub-inner {
+    text-align: right;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.clear {
+    clear: both;
+}
+
+.meta {
+    color: #666;
+    font-size: 0.9rem;
+    margin-top: 4px;
+    padding: 4px 8px;
+    text-align: center !important;
+}
+
+.post-link-in-posts {
+    display: block;
+    overflow: hidden;
+    list-style-type: none;
+    padding: 0.8em 0 0.8em 0;
+    text-decoration: none;
+    border-bottom: 1px dashed #d0d0d0;
+    color: #555;
+}
+
+.post-header {
+    text-align: center;
+    margin-bottom: 50px;
+    padding-top: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+ul.posts .date {
+    margin-right: 0.3em;
+    display: inline-block;
+    font-family: 'lucida grande', 'lucida sans unicode', lucida, 'Helvetica Neue', helvetica, 'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+}
+
+.post-link-in-posts .article {
+    font-weight: 800;
+    color: #555;
+    margin-right: 3px;
+    transition: all 100ms linear;
+    font-size: 0.9rem;
+}
+
+.post-link-in-posts .date {
+    width: 120px;
+    font-size: 0.6em;
+    color: #939aa1;
+    display: block;
+}
+
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.fancy, article {
+    font-family: Georgia, "Linux Libertine", -apple-system, "Helvetica Neue", Helvetica, "Nimbus Sans L", Arial, "Liberation Sans", "PingFang SC", "Hiragino Sans GB", "Source Han Sans CN", "Source Han Sans SC", "Microsoft YaHei", "Wenquanyi Micro Hei", "WenQuanYi Zen Hei", "ST Heiti", SimHei, "WenQuanYi Zen Hei Sharp", sans-serif;
+    line-height: 170%;
+}
+
+.post > .highlight {
+    word-wrap: break-word;
+}
+
+.post-recent-in-index {
+    paddin-top: 2em;
+}
+
+.post-list-in-index {
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style: none;
+}
+
+.motto {
+    font-family: "Linux Libertine", Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, "TW-Kai", serif;
+    padding: 0 2em;
+    color: #6a737d;
+    border-right: 0.25em solid #dfe2e5;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 40px;
+    -webkit-margin-end: 40px;
+}
+
+.motto p {
+    text-align: right;
+}
+
+.about-me {
+    margin-bottom: 29px;
+}
+
+.about-me p {
+    color: #6a737d;
+    text-align: center;
+    font-size: 110%;
+    font-family: "Linux Libertine", Baskerville, Georgia, "Liberation Serif", "Kaiti SC", STKaiti, "AR PL UKai CN", "AR PL UKai HK", "AR PL UKai TW", "AR PL UKai TW MBE", "AR PL KaitiM GB", KaiTi, KaiTi_GB2312, "TW-Kai", serif;
+}

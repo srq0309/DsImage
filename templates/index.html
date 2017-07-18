@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>image search</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'ds_image.css' %}"/>
+</head>
+<body>
+<div class="header-container">
+    <header class="inner">
+        <div class="pull-left right">
+            <a href="{% url 'index' %}"><img class="avatar" src="{% static 'search_logo.jpg' %}" alt="logo"></a>
+        </div>
+        <nav>
+            <form action="{% url 'search_keyword' %}" method="post">
+                {% csrf_token %}
+                <p>文字搜索：</p>
+                <label><input type="text" name="keyword"></label>
+                <input type="submit" value="搜索"/>
+            </form>
+        </nav>
+        <nav>
+            <p></p>
+        </nav>
+        <nav>
+            <form enctype="multipart/form-data" action="{% url 'search_file' %}" method="post">
+                {% csrf_token %}
+                <p>图片搜索：</p>
+                <input type="file" name="file">
+                <input type="submit" value="搜索"/>
+            </form>
+        </nav>
+        <nav>
+            <form enctype="multipart/form-data" action="{% url 'search_filter' %}" method="post">
+                {% csrf_token %}
+                <p>条件筛选：</p>
+                <label>
+                    <input name="color" type="radio" value="(255,0,0)"/><code>红</code>
+                </label>
+                <label>
+                    <input name="color" type="radio" value="(255,125,0)"/><code>橙</code>
+                </label>
+                <label>
+                    <input name="color" type="radio" value="(255,255,0)"/><code>黄</code>
+                </label>
+                <label>
+                    <input name="color" type="radio" value="(0,255,0)"/><code>绿</code>
+                </label>
+                <label>
+                    <input name="color" type="radio" value="(0,0,255)"/><code>蓝</code>
+                </label>
+                <label>
+                    <input name="color" type="radio" value="(0,255,255)"/><code>靛</code>
+                </label>
+                <label>
+                    <input name="color" type="radio" value="(255,0,255)"/><code>紫</code>
+                </label>
+                <label>
+                    <input name="color" type="radio" value="NO" checked="checked"/><code>无</code>
+                </label>
+                <br/>
+                <label>
+                    <code>尺寸下限</code><input type="text" name="low"/>
+                </label>
+                <label>
+                    <code>尺寸上限</code><input type="text" name="high"/>
+                </label>
+                <input type="submit" value="搜索"/>
+            </form>
+        </nav>
+        <div class="clear"></div>
+        <div><p>{{ key }}</p></div>
+    </header>
+    <div class="clear"></div>
+</div>
+
+<div id="con">
+    <form action="{% url 'quadratic_search' %}" method="post">
+        {% csrf_token %}
+        <input type="submit" value="二次检索"/>
+        <br/>
+        {% for image_path in image_list %}
+            <div class="pic">
+                <img src="http://10.0.9.1:81/DET/test/{{ image_path }}" width="360px">
+                <label>
+                    <input type="checkbox" name="images" value="{{ image_path }}"/>
+                    <input type="checkbox" name="image_list" value="{{ image_path }}" checked="checked"
+                           hidden="hidden"/>
+                </label>
+            </div>
+        {% endfor %}
+    </form>
+</div>
+
+<footer>
+    <div style="border-bottom: 1px solid #eee"></div>
+    <p>you can mail me at: <a href="mail:srq0309@outlook.com">srq0309@outlook.com</a></p>
+</footer>
+</body>
+</html>
